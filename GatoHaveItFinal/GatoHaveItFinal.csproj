@@ -52,6 +52,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -168,20 +170,57 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MerchandisesController.cs" />
+    <Compile Include="Controllers\OrderDetailsController.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DataModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Merchandise.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\gatobootstrap.css" />
+    <Content Include="Content\Images\FleeceCatBlanket.PNG" />
+    <Content Include="Content\Images\GTHILogo.jpg" />
+    <Content Include="Content\Images\me-ow clock.jpg" />
+    <Content Include="Content\Images\MugCatffeinated.JPG" />
+    <Content Include="Content\Images\MugCatHeatbeat.JPG" />
+    <Content Include="Content\Images\MugCatLap.JPG" />
+    <Content Include="Content\Images\MugCatWalk.JPG" />
+    <Content Include="Content\Images\MugCoffee.JPG" />
+    <Content Include="Content\Images\MugCrazyCatLady.PNG" />
+    <Content Include="Content\Images\MugHappienessMeasure.JPG" />
+    <Content Include="Content\Images\MugStayHome.JPG" />
+    <Content Include="Content\Images\PetAlertWindowCling.JPG" />
+    <Content Include="Content\Images\PetEmergencyWalletCard.JPG" />
+    <Content Include="Content\Images\PetHomeAloneKeyChain.JPG" />
+    <Content Include="Content\Images\Shower Curtain.PNG" />
+    <Content Include="Content\Images\SocksBrownEars.JPG" />
+    <Content Include="Content\Images\SocksCatFace.JPG" />
+    <Content Include="Content\Images\TShirtAdoptPaw.JPG" />
+    <Content Include="Content\Images\TShirtCatHeartbeat.JPG" />
+    <Content Include="Content\Images\TShirtCoffee.JPG" />
+    <Content Include="Content\Images\TShirtHappinessMeasured.JPG" />
+    <Content Include="Content\Images\TShirtIHavePlans.JPG" />
+    <Content Include="Content\Images\TShirtKissedCat.JPG" />
+    <Content Include="Content\Images\TShirtLovePawUSA.JPG" />
+    <Content Include="Content\Images\TShirtYes.JPG" />
+    <Content Include="Content\Images\YeowwCatnipToy.JPG" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -234,6 +273,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Merchandises\Create.cshtml" />
+    <Content Include="Views\Merchandises\Delete.cshtml" />
+    <Content Include="Views\Merchandises\Details.cshtml" />
+    <Content Include="Views\Merchandises\Edit.cshtml" />
+    <Content Include="Views\Merchandises\Index.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\OrderDetails\Create.cshtml" />
+    <Content Include="Views\OrderDetails\Delete.cshtml" />
+    <Content Include="Views\OrderDetails\Details.cshtml" />
+    <Content Include="Views\OrderDetails\Edit.cshtml" />
+    <Content Include="Views\OrderDetails\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
