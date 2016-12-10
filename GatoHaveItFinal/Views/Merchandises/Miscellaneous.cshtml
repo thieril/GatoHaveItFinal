@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<GatoHaveItFinal.Models.Merchandise>
 
 @{
-    ViewBag.Title = "Availble Merchandise";
+    ViewBag.Title = "Miscellaneous";
 }
 
-<h2>Index</h2>
+<h2>Miscellaneous</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -38,8 +38,7 @@
             @Html.DisplayFor(modelItem => item.UnitPrice)
         </td>
         <td>
-            @*@Html.DisplayFor(modelItem => item.Image)*@
-            <img src="~/Content/Images/@item.Image" height="100" width="100" />
+            @Html.DisplayFor(modelItem => item.Image)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |

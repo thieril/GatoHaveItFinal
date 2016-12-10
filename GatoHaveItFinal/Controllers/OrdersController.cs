@@ -82,6 +82,7 @@ namespace GatoHaveItFinal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "OrderId,OrderDate,UserId,TotalAmount")] Order order)
         {
             if (ModelState.IsValid)
@@ -95,6 +96,7 @@ namespace GatoHaveItFinal.Controllers
         }
 
         // GET: Orders/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,6 +114,7 @@ namespace GatoHaveItFinal.Controllers
         // POST: Orders/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Order order = db.Orders.Find(id);

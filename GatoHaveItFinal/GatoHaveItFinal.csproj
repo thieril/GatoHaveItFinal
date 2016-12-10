@@ -189,12 +189,14 @@
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\TshirtRespository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\gatobootstrap.css" />
+    <Content Include="Content\Images\ContactMap.JPG" />
     <Content Include="Content\Images\FleeceCatBlanket.PNG" />
     <Content Include="Content\Images\GTHILogo.jpg" />
     <Content Include="Content\Images\me-ow clock.jpg" />
@@ -206,6 +208,7 @@
     <Content Include="Content\Images\MugCrazyCatLady.PNG" />
     <Content Include="Content\Images\MugHappienessMeasure.JPG" />
     <Content Include="Content\Images\MugStayHome.JPG" />
+    <Content Include="Content\Images\PawBoots.JPG" />
     <Content Include="Content\Images\PetAlertWindowCling.JPG" />
     <Content Include="Content\Images\PetEmergencyWalletCard.JPG" />
     <Content Include="Content\Images\PetHomeAloneKeyChain.JPG" />
@@ -293,6 +296,7 @@
     <Content Include="Views\OrderDetails\Details.cshtml" />
     <Content Include="Views\OrderDetails\Edit.cshtml" />
     <Content Include="Views\OrderDetails\Index.cshtml" />
+    <Content Include="Views\Merchandises\Miscellaneous.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,14 +15,14 @@ namespace GatoHaveItFinal.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "GatoHaveIt was launched in 2016.";
+            ViewBag.Message = "GatoHaveIt was founded in 2012.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Contact us With Your Questions.";
+            ViewBag.Message = "Contact us.";
 
             return View();
         }

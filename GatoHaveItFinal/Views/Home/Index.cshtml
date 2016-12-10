@@ -4,11 +4,15 @@
 <div class="row">
     <div class="container body-content col-sm-12">
         <div class="jumbotron">
-            <h1>GatoHaveIt&#8482;</h1>
+            @*<h1>GatoHaveIt&#8482;</h1>*@
+
+                <img src="~/content/images/gthilogo.jpg" class="img-rounded" alt="GatoHaveIt" height="150" width="150" />
+
             <p class="lead">
                 GatoHaveIt&#8482; is your one stop shop for that unique cat themed merchandise you have been searching for!
                 <br /> <br />If we don't carry it, you don't need it!
                 <br /> <br />Click the buttons below to view available items!
+
         </div>
 
         <div class="col-md-4">
@@ -24,6 +28,7 @@
         <div class="col-md-4">
             <center> <h2>Miscellaneous Items</h2></center>
             <a class="btn btn-default" href="~/views/merchandises/index.cshtml">  <img src="~/Content/Images/SocksCatFace.jpg" class="img-rounded" alt="Home Page" width="300" height="266">  &raquo; </a>
+            @*@Html.ActionLink("Merchandise", "Index", "Merchandises")*@
         </div>
     </div>
 </div>

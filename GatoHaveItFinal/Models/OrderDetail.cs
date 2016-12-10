@@ -22,5 +22,8 @@ namespace GatoHaveItFinal.Models
         public virtual Merchandise Merchandise { get; set; }
 
         public virtual Order Order { get; set; }
+
+        public virtual Customer Customer { get; set; }
+        
     }
 }
