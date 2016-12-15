@@ -4,31 +4,43 @@
 <div class="row">
     <div class="container body-content col-sm-12">
         <div class="jumbotron">
-            @*<h1>GatoHaveIt&#8482;</h1>*@
 
-                <img src="~/content/images/gthilogo.jpg" class="img-rounded" alt="GatoHaveIt" height="150" width="150" />
-
+            <center><h1>GatoHaveIt&#8482;</h1></center>
             <p class="lead">
-                GatoHaveIt&#8482; is your one stop shop for that unique cat themed merchandise you have been searching for!
-                <br /> <br />If we don't carry it, you don't need it!
-                <br /> <br />Click the buttons below to view available items!
+                <Center>
+                    GatoHaveIt&#8482; is your one stop shop for that unique cat themed merchandise you have been searching for!<br />
+                    If we don't carry it, you don't need it! <br />Click the buttons below to learn about our company, view merchandise and contact our Customer Service Department!
+                </Center>
+            </p>
 
+            @*<center><img src="~/content/images/gthilogo.jpg" class="img-rounded" alt="GatoHaveIt" height="150" width="150" /></center>*@
+        </div>
+
+
+        @*controller/Action/id*@
+        <div class="col-md-4">
+            <center>
+                <h2>About Us</h2>
+                <img src="~/Content/Images/GTHILogo.jpg" class="img-rounded" alt="Home Page" width="300" height="266">
+                <a class="btn btn-default" @Html.ActionLink("Learn More", "About", "Home") &raquo;</a>
+            </center>
         </div>
 
         <div class="col-md-4">
-            <center><h2>T-Shirts</h2></center>
-            <a class="btn btn-default" href="~/views/merchandises/index.cshtml"> <img src="~/Content/Images/TshirtIHavePlans.jpg" class="img-rounded" alt="Home Page" width="300" height="266">   &raquo;</a>
+            <center>
+                <h2>Merchandise</h2>
+                <img src="~/Content/Images/TshirtIHavePlans.jpg" class="img-rounded" alt="Home Page" width="300" height="266">
+                <a class="btn btn-default" @Html.ActionLink("View Catalog", "Index", "Merchandises") &raquo; </a>
+            </center>
         </div>
 
         <div class="col-md-4">
-            <center><h2>Mugs</h2></center>
-            <a class="btn btn-default" href="~/views/merchandises/index.cshtml">  <img src="~/Content/Images/MugCatLap.jpg" class="img-rounded" alt="Home Page" width="300" height="266">  &raquo;</a>
-        </div>
-
-        <div class="col-md-4">
-            <center> <h2>Miscellaneous Items</h2></center>
-            <a class="btn btn-default" href="~/views/merchandises/index.cshtml">  <img src="~/Content/Images/SocksCatFace.jpg" class="img-rounded" alt="Home Page" width="300" height="266">  &raquo; </a>
-            @*@Html.ActionLink("Merchandise", "Index", "Merchandises")*@
+            @*label, Action, controller*@
+            <center>
+                <h2>Contact Us</h2>
+                <img src="~/Content/Images/ContactUs5.jpg" class="img-rounded" alt="Home Page" width="300" height="266">
+                <a class="btn btn-default" @Html.ActionLink("Customer Service", "Contact", "Home") &raquo; </a>
+            </center>
         </div>
     </div>
 </div>

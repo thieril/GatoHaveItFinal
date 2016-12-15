@@ -4,49 +4,91 @@
     ViewBag.Title = "Availble Merchandise";
 }
 
-<h2>Index</h2>
-
+<h2>Merchandise Catalog</h2>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ProductName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UnitPrice)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Image)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UnitPrice)
-        </td>
-        <td>
-            @*@Html.DisplayFor(modelItem => item.Image)*@
-            <img src="~/Content/Images/@item.Image" height="100" width="100" />
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
-        </td>
-    </tr>
-}
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr>
+                <th>
+                    <div class="col-sm-10">
+                        @Html.DisplayNameFor(model => model.ProductName)
+                    </div>
+                </th>
+                <th>
+                    <div class="col-sm-12">
+                        @Html.DisplayNameFor(model => model.Description)
+                    </div>
+                </th>
+                <th>
+                    <div class="col-sm-2">
+                        @Html.DisplayNameFor(model => model.UnitPrice)
+                    </div>
+                </th>
+                <th>
+                    <div class="col-sm-3">
+                        @Html.DisplayNameFor(model => model.Image)
+                    </div>
+                </th>
+                <th></th>
+            </tr>
 
-</table>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <div class="col-sm-10">
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </div>
+                    </td>
+
+                  
+                    <td>
+                        <div class="col-sm-12">
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </div>
+                    </td>
+
+                   
+                   
+                    <td>
+                        <div class="col-sm-2">
+                            @Html.DisplayFor(modelItem => item.UnitPrice)
+                        </div>
+                    </td>
+
+                   
+                 
+                    <td>
+                        <div class="col-sm-3">
+                            @*@Html.DisplayFor(modelItem => item.Image)*@
+                            <img src="~/Content/Images/@item.Image" height="100" width="100" /></div>
+                    </td>
+
+                    <td></td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                    <td>
+                        <div class="col-sm-10">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ProductId }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
+                            </div>
+                    </td>
+                    }
+                </tr>
+            }
+
+        </table>
+    </div>
+
+
+
+
+
+
+
+

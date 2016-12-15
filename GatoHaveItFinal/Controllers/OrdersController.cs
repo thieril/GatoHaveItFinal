@@ -22,6 +22,7 @@ namespace GatoHaveItFinal.Controllers
         }
 
         // GET: Orders/Details/5
+        //[Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,9 +38,10 @@ namespace GatoHaveItFinal.Controllers
         }
 
         // GET: Orders/Create
+        [Authorize(Roles = "Member")]
         public ActionResult Create()
         {
-            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName");
+            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", "LastName" );
             return View();
         }
 
@@ -48,7 +50,8 @@ namespace GatoHaveItFinal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "OrderId,OrderDate,UserId,TotalAmount")] Order order)
+        [Authorize(Roles = "Member")]
+        public ActionResult Create([Bind(Include = "UserId,OrderId,OrderDate,TotalAmount")] Order order)
         {
             if (ModelState.IsValid)
             {
@@ -57,11 +60,12 @@ namespace GatoHaveItFinal.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", order.UserId);
+            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", "LastName",  order.UserId);
             return View(order);
         }
 
         // GET: Orders/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +77,7 @@ namespace GatoHaveItFinal.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", order.UserId);
+            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", "LastName",order.UserId);
             return View(order);
         }
 
@@ -91,7 +95,7 @@ namespace GatoHaveItFinal.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", order.UserId);
+            ViewBag.UserId = new SelectList(db.Customers, "UserId", "FirstName", "LastName",order.UserId);
             return View(order);
         }
 

@@ -197,6 +197,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\gatobootstrap.css" />
     <Content Include="Content\Images\ContactMap.JPG" />
+    <Content Include="Content\Images\ContactUs.jpg" />
+    <Content Include="Content\Images\ContactUs2.jpg" />
+    <Content Include="Content\Images\ContactUs3.jpg" />
+    <Content Include="Content\Images\ContactUs4.jpg" />
+    <Content Include="Content\Images\ContactUs5.jpg" />
     <Content Include="Content\Images\FleeceCatBlanket.PNG" />
     <Content Include="Content\Images\GTHILogo.jpg" />
     <Content Include="Content\Images\me-ow clock.jpg" />
@@ -297,6 +302,7 @@
     <Content Include="Views\OrderDetails\Edit.cshtml" />
     <Content Include="Views\OrderDetails\Index.cshtml" />
     <Content Include="Views\Merchandises\Miscellaneous.cshtml" />
+    <Content Include="Views\Merchandises\Tshirts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

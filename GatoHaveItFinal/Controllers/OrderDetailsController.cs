@@ -37,6 +37,7 @@ namespace GatoHaveItFinal.Controllers
         }
 
         // GET: OrderDetails/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.ProductId = new SelectList(db.Merchandises, "ProductId", "ProductName");
@@ -64,6 +65,7 @@ namespace GatoHaveItFinal.Controllers
         }
 
         // GET: OrderDetails/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,6 +87,7 @@ namespace GatoHaveItFinal.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "OrderDetailId,OrderId,ProductId,UnitPrice,Quanity")] OrderDetail orderDetail)
         {
             if (ModelState.IsValid)
@@ -99,6 +102,7 @@ namespace GatoHaveItFinal.Controllers
         }
 
         // GET: OrderDetails/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,6 +120,7 @@ namespace GatoHaveItFinal.Controllers
         // POST: OrderDetails/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             OrderDetail orderDetail = db.OrderDetails.Find(id);
